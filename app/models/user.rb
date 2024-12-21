@@ -3,4 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-end
+
+  has_secure_password
+  has_many :projects, foreign_key: 'created_by_id'
+  has_many :tasks
+  has_many :comments
+  has_and_belongs_to_many :teams
+        end
