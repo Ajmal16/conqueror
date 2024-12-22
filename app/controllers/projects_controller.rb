@@ -15,10 +15,15 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.created_by_id = current_user.id
     if @project.save
-      redirect_to project_path(@project), notice: 'Project was successfully created.'
+      redirect_to @project, notice: 'Project was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new, notice: "Project is not created"
     end
+  end
+
+  def destroy
+    Project.find(params[:id]).destroy
+    redirect_to projects_path
   end
 
   private

@@ -5,4 +5,8 @@
 <p><%= @project.end_date %></p>
 <p><%= @project.created_by_id %></p>
 
+
+<%= link_to 'Remove', project_path(@project), data:{turbo_method: :delete}, class: 'btn-purple-remove'%>
+
+
 <%= link_to "Back to Projects", projects_path %>

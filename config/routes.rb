@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get "/profile", to: "pages#profile"
 
 
-  resources :projects, only: [:show, :index, :new]
+  resources :projects, only: [:show, :index, :new, :create]
+  resources :projects, only: [:destroy]
 
   # Defines the root path route ("/")
   # root "posts#index"
