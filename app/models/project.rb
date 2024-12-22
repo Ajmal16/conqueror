@@ -3,4 +3,6 @@ class Project < ApplicationRecord
   has_many :tasks
   has_many :comments, as: :commentable
   has_many :attachments, as: :attachable
+
+  validates :name, presence: true
 end

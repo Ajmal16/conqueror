@@ -8,8 +8,100 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
+User.destroy_all
 Project.destroy_all
+
+user_1 = User.create(
+  first_name: "John",
+  last_name: "Doe",
+  email: "john.doe@example.com",
+  password: "password123",
+  role: "admin",
+  created_at: Time.now
+)
+
+  user_2 = User.create(
+    first_name: "Jane",
+    last_name: "Smith",
+    email: "jane.smith@example.com",
+    password: "securepassword",
+    role: "user",
+    created_at: Time.now
+  )
+
+  user_3 = User.create(
+    first_name: "Alice",
+    last_name: "Johnson",
+    email: "alice.johnson@example.com",
+    password: "alicepass123",
+    role: "editor",
+    created_at: Time.now
+  )
+
+  user_4 = User.create(
+    first_name: "Bob",
+    last_name: "Brown",
+    email: "bob.brown@example.com",
+    password: "bobbypass456",
+    role: "user",
+    created_at: Time.now
+  )
+
+  user_5 = User.create(
+    first_name: "Charlie",
+    last_name: "Williams",
+    email: "charlie.williams@example.com",
+    password: "charlie789",
+    role: "moderator",
+    created_at: Time.now
+  )
+
+  user_6 = User.create(
+    first_name: "Emma",
+    last_name: "Davis",
+    email: "emma.davis@example.com",
+    password: "emmapass456",
+    role: "user",
+    created_at: Time.now
+  )
+
+  user_7 = User.create(
+    first_name: "Liam",
+    last_name: "Wilson",
+    email: "liam.wilson@example.com",
+    password: "liamsecure789",
+    role: "admin",
+    created_at: Time.now
+  )
+
+  user_8 = User.create(
+    first_name: "Sophia",
+    last_name: "Moore",
+    email: "sophia.moore@example.com",
+    password: "sophiapass123",
+    role: "user",
+    created_at: Time.now
+  )
+
+  user_9 = User.create(
+    first_name: "James",
+    last_name: "Taylor",
+    email: "james.taylor@example.com",
+    password: "jamestay789",
+    role: "editor",
+    created_at: Time.now
+  )
+  
+  user_10 = User.create(
+    first_name: "Mia",
+    last_name: "Anderson",
+    email: "mia.anderson@example.com",
+    password: "miapass123",
+    role: "user",
+    created_at: Time.now
+  )
+
+puts "10 users with unique IDs created successfully!"
 
 project_1 = Project.create(
   name: "Website Redesign",
