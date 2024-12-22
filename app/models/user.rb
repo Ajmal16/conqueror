@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_secure_password
   has_many :projects, foreign_key: 'created_by_id'
   has_many :tasks
   has_many :comments

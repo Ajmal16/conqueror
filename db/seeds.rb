@@ -91,7 +91,7 @@ user_1 = User.create(
     role: "editor",
     created_at: Time.now
   )
-  
+
   user_10 = User.create(
     first_name: "Mia",
     last_name: "Anderson",
@@ -109,7 +109,7 @@ project_1 = Project.create(
   status: "In Progress",
   start_date: Date.parse("2023-12-01"),
   end_date: Date.parse("2024-02-28"),
-  created_by_id: 1
+  created_by_id: user_1.id
 )
 
 project_2 = Project.create(
@@ -118,7 +118,7 @@ project_2 = Project.create(
   status: "Planning",
   start_date: nil,
   end_date: nil,
-  created_by_id: 2
+  created_by_id: user_2.id
 )
 
 project_3 = Project.create(
@@ -127,7 +127,7 @@ project_3 = Project.create(
   status: "Completed",
   start_date: Date.parse("2023-10-15"),
   end_date: Date.parse("2023-11-30"),
-  created_by_id: 8
+  created_by_id: user_3.id
 )
 
 project_4 = Project.create(
@@ -136,7 +136,7 @@ project_4 = Project.create(
   status: "On Hold",
   start_date: Date.parse("2023-09-01"),
   end_date: nil,
-  created_by_id: 7
+  created_by_id: user_4.id
 )
 
 project_5 = Project.create(
@@ -145,7 +145,7 @@ project_5 = Project.create(
   status: "In Progress",
   start_date: Date.parse("2023-11-01"),
   end_date: Date.parse("2024-01-31"),
-  created_by_id: 6
+  created_by_id: user_5.id
 )
 
 project_6 = Project.create(
@@ -154,7 +154,7 @@ project_6 = Project.create(
   status: "Backlog",
   start_date: nil,
   end_date: nil,
-  created_by_id: 5
+  created_by_id: user_1.id
 )
 
 project_7 = Project.create(
@@ -163,7 +163,7 @@ project_7 = Project.create(
   status: "Completed",
   start_date: Date.parse("2023-11-17"),
   end_date: Date.parse("2023-11-17"),
-  created_by_id: 2
+  created_by_id: user_3.id
 )
 
 project_8 = Project.create(
@@ -172,7 +172,7 @@ project_8 = Project.create(
   status: "In Review",
   start_date: Date.parse("2023-12-15"),
   end_date: nil,
-  created_by_id: 4
+  created_by_id: user_7.id
 )
 
 project_9 = Project.create(
@@ -181,7 +181,7 @@ project_9 = Project.create(
   status: "Not Started",
   start_date: nil,
   end_date: nil,
-  created_by_id: 5
+  created_by_id: user_8.id
 )
 
 project_10 = Project.create(
@@ -190,7 +190,7 @@ project_10 = Project.create(
   status: "Ongoing",
   start_date: Date.parse("2023-01-01"),
   end_date: nil,
-  created_by_id: 4
+  created_by_id: user_9.id
 )
 
 puts "Projects are generated"
