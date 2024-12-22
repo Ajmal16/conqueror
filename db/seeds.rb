@@ -117,8 +117,8 @@ project_2 = Project.create(
   name: "Mobile App Development",
   description: "Develop a mobile app to provide our services to customers on the go.",
   status: "Planning",
-  start_date: nil,
-  end_date: nil,
+  start_date: Date.parse("2023-12-01"),
+  end_date: Date.parse("2023-12-10"),
   created_by_id: user_2.id
 )
 
@@ -136,7 +136,7 @@ project_4 = Project.create(
   description: "Launch a new product to market, including development, marketing, and sales activities.",
   status: "On Hold",
   start_date: Date.parse("2023-09-01"),
-  end_date: nil,
+  end_date: Date.parse("2023-12-01"),
   created_by_id: user_4.id
 )
 
@@ -153,9 +153,9 @@ project_6 = Project.create(
   name: "Customer Support Portal Development",
   description: "Develop a self-service customer support portal to reduce support tickets and improve customer satisfaction.",
   status: "Backlog",
-  start_date: nil,
-  end_date: nil,
-  created_by_id: user_1.id
+  start_date: Date.parse("2023-12-06"),
+  end_date: Date.parse("2023-12-07"),
+  created_by_id: user_6.id
 )
 
 project_7 = Project.create(
@@ -164,7 +164,7 @@ project_7 = Project.create(
   status: "Completed",
   start_date: Date.parse("2023-11-17"),
   end_date: Date.parse("2023-11-17"),
-  created_by_id: user_3.id
+  created_by_id: user_7.id
 )
 
 project_8 = Project.create(
@@ -172,16 +172,16 @@ project_8 = Project.create(
   description: "Develop and implement a content marketing strategy to attract and engage potential customers.",
   status: "In Review",
   start_date: Date.parse("2023-12-15"),
-  end_date: nil,
-  created_by_id: user_7.id
+  end_date: Date.parse("2023-12-01"),
+  created_by_id: user_8.id
 )
 
 project_9 = Project.create(
   name: "Data Security Audit",
   description: "Conduct a data security audit to identify and address any vulnerabilities.",
   status: "Not Started",
-  start_date: nil,
-  end_date: nil,
+  start_date: Date.parse("2023-12-01"),
+  end_date: Date.parse("2023-12-01"),
   created_by_id: user_8.id
 )
 
@@ -190,7 +190,7 @@ project_10 = Project.create(
   description: "Develop and implement a social media management strategy to increase brand awareness and engagement.",
   status: "Ongoing",
   start_date: Date.parse("2023-01-01"),
-  end_date: nil,
+  end_date: Date.parse("2023-12-01"),
   created_by_id: user_9.id
 )
 
@@ -203,7 +203,7 @@ task_1 = Task.create(
   status: "In Progress",
   priority: "High",
   date: Date.parse("2024-01-10"),
-  project_id: Project.first.id,
+  project_id: project_1.id,
   user_id: user_1.id
 )
 
@@ -213,8 +213,8 @@ task_2 = Task.create(
   status: "Not Started",
   priority: "High",
   date: Date.parse("2024-01-15"),
-  project_id: Project.second.id,
-  user_id: User.second.id
+  project_id: project_2.id,
+  user_id: user_2.id
 )
 
 task_3 = Task.create(
@@ -223,8 +223,8 @@ task_3 = Task.create(
   status: "Completed",
   priority: "Medium",
   date: Date.parse("2023-12-01"),
-  project_id: Project.third.id,
-  user_id: User.third.id
+  project_id: project_3.id,
+  user_id: user_3.id
 )
 
 task_4 = Task.create(
@@ -233,8 +233,8 @@ task_4 = Task.create(
   status: "In Review",
   priority: "High",
   date: Date.parse("2024-02-01"),
-  project_id: Project.fourth.id,
-  user_id: User.fourth.id
+  project_id: project_4.id,
+  user_id: user_4.id
 )
 
 task_5 = Task.create(
@@ -243,8 +243,8 @@ task_5 = Task.create(
   status: "In Progress",
   priority: "High",
   date: Date.parse("2024-01-20"),
-  project_id: Project.fifth.id,
-  user_id: User.fifth.id
+  project_id: project_5.id,
+  user_id: user_5.id
 )
 
 task_6 = Task.create(
@@ -253,8 +253,8 @@ task_6 = Task.create(
   status: "In Progress",
   priority: "Medium",
   date: Date.parse("2023-12-22"),
-  project_id: Project.first.id,
-  user_id: User.third.id
+  project_id: project_6.id,
+  user_id: user_6.id
 )
 
 task_7 = Task.create(
@@ -263,8 +263,8 @@ task_7 = Task.create(
   status: "Completed",
   priority: "Low",
   date: Date.parse("2023-11-30"),
-  project_id: Project.second.id,
-  user_id: User.first.id
+  project_id: project_7.id,
+  user_id: user_7.id
 )
 
 task_8 = Task.create(
@@ -273,8 +273,8 @@ task_8 = Task.create(
   status: "Completed",
   priority: "Low",
   date: Date.parse("2023-11-15"),
-  project_id: Project.third.id,
-  user_id: User.fifth.id
+  project_id: project_8.id,
+  user_id: user_8.id
 )
 
 task_9 = Task.create(
@@ -283,8 +283,8 @@ task_9 = Task.create(
   status: "Not Started",
   priority: "Medium",
   date: Date.parse("2024-01-25"),
-  project_id: Project.fourth.id,
-  user_id: User.fourth.id
+  project_id: project_9.id,
+  user_id: user_9.id
 )
 
 task_10 = Task.create(
@@ -293,8 +293,8 @@ task_10 = Task.create(
   status: "In Progress",
   priority: "High",
   date: Date.parse("2024-01-18"),
-  project_id: Project.fifth.id,
-  user_id: User.second.id
+  project_id: project_10.id,
+  user_id: user_10.id
 )
 
 puts "10 tasks created successfully!"

@@ -4,9 +4,6 @@ class Project < ApplicationRecord
   has_many :comments, as: :commentable
   has_many :attachments, as: :attachable
 
-  validates :name, presence: true
-  validates :description, presence: true
-  validates :status, presence: true
-  validates :start_date, presence: true
-  validates :end_date, presence: true
+  validates :name, :description, :status, :start_date, :end_date, presence: true
+
 end

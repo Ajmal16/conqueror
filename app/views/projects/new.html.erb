@@ -1,12 +1,11 @@
-<%= simple_form_for @project do |f| %>
-  <%= f.error_notification %>
+<h1>New Project</h1>
 
+<%= simple_form_for @project do |f| %>
   <%= f.input :name %>
   <%= f.input :description, as: :text %>
   <%= f.input :status %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
-  <%= f.input :created_by_id %>
   <%= f.file_field :photo %>
   <%= f.submit "Create", class: "btn-purple-full-width" %>
 
