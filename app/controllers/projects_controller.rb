@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
+    @project = Project.new(project_params.merge(created_by_id: current_user.id))
     if @project.save
       redirect_to @project, notice: 'Project was successfully created.'
     else
@@ -21,8 +21,8 @@ class ProjectsController < ApplicationController
   end
 
   private
-  
-    def project_params
-      params.require(:project).permit(:name, :description, :status, :start_date, :end_date, :created_by_id)
+
+  def project_params
+    params.require(:project).permit(:name, :description, :status, :start_date, :end_date, :created_by_id)
     end
 end
